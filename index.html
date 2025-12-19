@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>קורס AI למתחילים - תמר שורק</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-dark: #0b1020;
+    --card-bg: rgba(255,255,255,0.08);
+    --neon-blue: #4fdcff;
+    --neon-purple: #b36bff;
+    --neon-pink: #ff4fc3;
+    --text-main: #ffffff;
+    --text-dim: #d6d9e0;
+    --accent-gold: #ffd700;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(79,220,255,0.12), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(179,107,255,0.12), transparent 40%),
+        var(--bg-dark);
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 90px 0 50px;
+}
+
+.badge {
+    background: var(--neon-pink);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.glass-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
+    backdrop-filter: blur(18px);
+    border-radius: 26px;
+    padding: 45px;
+    margin-bottom: 45px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+}
+
+.highlight-card {
+    box-shadow: 0 0 45px rgba(79,220,255,0.35);
+}
+
+.soft-card {
+    background: rgba(255,255,255,0.06);
+}
+
+.intro-bullets {
+    list-style: none;
+    padding: 0;
+    font-size: 1.15rem;
+}
+
+.intro-bullets li {
+    margin-bottom: 12px;
+    padding-right: 10px;
+}
+
+.marketing-text {
+    font-size: 1.25rem;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+}
+
+.simulator-box {
+    background: rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px dashed var(--neon-blue);
+    margin: 35px 0;
+}
+
+.sim-input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    margin: 12px 0;
+    font-size: 1rem;
+}
+
+.sim-btn {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+    border: none;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.sim-result {
+    background: rgba(0,0,0,0.45);
+    padding: 15px;
+    border-radius: 10px;
+    border-right: 4px solid var(--neon-purple);
+    margin-top: 15px;
+    color: var(--neon-blue);
+}
+
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.session-card {
+    background: rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 22px;
+    transition: 0.3s;
+}
+
+.session-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.session-card h4 {
+    color: var(--neon-pink);
+    margin-bottom: 10px;
+}
+
+.check-item {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+}
+
+.check-item::before {
+    content: "✓ ";
+    color: var(--neon-blue);
+}
+
+.price-tag {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--accent-gold);
+    margin: 35px 0;
+    font-weight: 800;
+}
+
+.btn-register {
+    display: block;
+    text-align: center;
+    padding: 24px;
+    font-size: 1.7rem;
+    font-weight: 800;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+    box-shadow: 0 12px 35px rgba(255,79,195,0.45);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-contact {
+    padding: 16px;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-whatsapp {
+    border: 2px solid #25D366;
+    color: #25D366;
+}
+
+.btn-email {
+    border: 2px solid var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2.6rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <span class="badge">מחזור חדש נפתח בקרוב</span>
+    <h1>גלו את הכוח של<br>הבינה המלאכותית</h1>
+    <p class="tagline">הדרך הפשוטה, הברורה והמעשית להיכנס לעולם ה-AI</p>
+</header>
+
+<div class="glass-card highlight-card">
+    <h2>לא צריך להיות טכנולוגים כדי להשתמש ב-AI</h2>
+    <p class="marketing-text">
+        הבינה המלאכותית כבר כאן – והיא זמינה לכל אחד ואחת.
+        הקורס נבנה במיוחד עבור מי שרוצה להבין, להתנסות ולהשתמש ב-AI
+        בצורה פשוטה וברורה – בלי קוד ובלי רקע טכני.
+    </p>
+    <p class="marketing-text">
+        כבר מהמפגש הראשון תתחילו לחסוך זמן, לעבוד חכם יותר
+        ולגלות כלים שיכולים לשדרג את העבודה והחיים האישיים.
+    </p>
+</div>
+
+<div class="glass-card">
+    <ul class="intro-bullets">
+        <li>קורס מעשי ונגיש במיוחד למתחילים</li>
+        <li>שלושה מפגשי זום קצרים וממוקדים</li>
+        <li>כלים שימושיים ליום־יום ולעבודה</li>
+        <li>לימוד צעד־אחר־צעד, בלי מושגים מסובכים</li>
+    </ul>
+
+    <div class="simulator-box">
+        <h3>רוצים לראות כמה זה פשוט?</h3>
+        <input id="simInput" class="sim-input" placeholder="כתבו כאן משפט פשוט...">
+        <button class="sim-btn" onclick="simulateAI()">שפר עם AI</button>
+        <div id="simResult" class="sim-result">כאן תופיע התוצאה</div>
+    </div>
+</div>
+
+<div class="glass-card">
+    <h2 style="text-align:center;">עם מה תצאו מהקורס?</h2>
+    <div class="syllabus-grid">
+        <div class="session-card">
+            <h4>יצירת תוכן</h4>
+            <span class="check-item">טקסטים, ברכות, שירים ודברי תורה</span>
+            <span class="check-item">יצירת תמונות מרשימות</span>
+        </div>
+        <div class="session-card">
+            <h4>יעילות וסדר</h4>
+            <span class="check-item">ארגון משימות</span>
+            <span class="check-item">תמצות מידע והכנת מצגות</span>
+        </div>
+        <div class="session-card">
+            <h4>עצמאות וביטחון</h4>
+            <span class="check-item">יכולת לעבוד לבד עם AI</span>
+            <span class="check-item">היכרות עם כלים נוספים</span>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card soft-card">
+    <h2 style="text-align:center;">למי הקורס מתאים?</h2>
+    <ul class="intro-bullets">
+        <li>לצעירים ולמבוגרים</li>
+        <li>למי שלא התנסה עדיין בבינה מלאכותית</li>
+        <li>למי שניסה ורוצה להכיר כלים חדשים</li>
+        <li>לעצמאיים, שכירים, סטודנטים ואנשי חינוך</li>
+    </ul>
+    <p style="text-align:center;font-weight:600;">
+        רמת ידע נדרשת: יכולת לגלוש באינטרנט
+    </p>
+</div>
+
+<div class="price-tag">כל הקורס ב־135 ₪ בלבד</div>
+
+<a class="btn-register" href="https://forms.gle/yMC5KyPKRSpSUSwS7" target="_blank">
+    שריינו מקום עכשיו
+</a>
+
+<div class="contact-grid">
+    <a class="btn-contact btn-whatsapp" href="https://wa.me/972545640993">וואטסאפ: 054-5640993</a>
+    <a class="btn-contact btn-email" href="mailto:tamsoreq993@gmail.com">מייל: tamsoreq993@gmail.com</a>
+</div>
+
+<div class="footer">
+    © 2025 קורס בינה מלאכותית – תמר שורק
+</div>
+
+</div>
+
+<script>
+function simulateAI() {
+    const i = document.getElementById("simInput").value;
+    const r = document.getElementById("simResult");
+    if (!i) { r.innerText = "כתבו משהו כדי לראות קסם"; return; }
+    r.innerText = "ה-AI משפר את הטקסט...";
+    setTimeout(()=> {
+        r.innerText = "נוסח משופר, ברור ומקצועי – כך AI עובד בקורס";
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
