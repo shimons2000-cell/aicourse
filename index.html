@@ -8,326 +8,333 @@
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#f6f9ff;
-  --card:#ffffff;
-  --blue:#3b82f6;
-  --purple:#8b5cf6;
-  --pink:#ec4899;
-  --green:#10b981;
-  --text:#1f2937;
-  --muted:#6b7280;
+:root {
+    --bg-main: #f6f9ff;
+    --bg-soft: #ffffff;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+    --green: #10b981;
+    --text-main: #1f2937;
+    --text-dim: #6b7280;
 }
 
-body{
-  margin:0;
-  font-family:'Assistant',sans-serif;
-  background:
-    radial-gradient(circle at 10% 10%, rgba(59,130,246,.15), transparent 40%),
-    radial-gradient(circle at 90% 20%, rgba(236,72,153,.15), transparent 40%),
-    radial-gradient(circle at 50% 90%, rgba(16,185,129,.15), transparent 40%),
-    var(--bg);
-  color:var(--text);
+body {
+    margin: 0;
+    font-family: 'Assistant', sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(59,130,246,0.15), transparent 40%),
+        radial-gradient(circle at 90% 20%, rgba(236,72,153,0.15), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(16,185,129,0.15), transparent 40%),
+        var(--bg-main);
+    color: var(--text-main);
 }
 
-.container{max-width:980px;margin:auto;padding:24px}
-
-header{text-align:center;padding:90px 20px 40px}
-
-.badge{
-  display:inline-block;
-  background:linear-gradient(45deg,var(--pink),var(--purple));
-  color:#fff;
-  padding:8px 24px;
-  border-radius:999px;
-  font-weight:800;
-  margin-bottom:18px;
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 24px;
 }
 
-h1{font-size:3.6rem;line-height:1.1;margin:0}
-.subtitle{font-size:1.6rem;color:var(--muted);margin-top:18px}
-.teacher{margin-top:16px;font-weight:700}
-
-.card{
-  background:var(--card);
-  border-radius:28px;
-  padding:44px;
-  margin-bottom:45px;
-  box-shadow:0 25px 60px rgba(0,0,0,.08);
+header {
+    text-align: center;
+    padding: 90px 20px 50px;
 }
 
-.flex{
-  display:flex;
-  gap:30px;
-  align-items:center;
-  flex-wrap:wrap;
+.badge {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--pink), var(--purple));
+    color: white;
+    padding: 8px 22px;
+    border-radius: 999px;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
-.flex.reverse{flex-direction:row-reverse}
-
-.text-block p{
-  font-size:1.2rem;
-  color:var(--muted);
-  margin-bottom:14px;
+h1 {
+    font-size: 3.6rem;
+    line-height: 1.1;
+    margin: 0;
 }
 
-.bullets{list-style:none;padding:0;font-size:1.1rem}
-.bullets li{margin-bottom:12px}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-  margin-top:30px;
+.subtitle {
+    font-size: 1.6rem;
+    margin-top: 18px;
+    color: var(--text-dim);
 }
 
-.session{
-  background:linear-gradient(180deg,#f9fafb,#eef2ff);
-  border-radius:22px;
-  padding:26px;
+.teacher {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
-.session h3{margin-top:0;color:var(--purple)}
-
-.check{display:block;color:var(--muted);margin-bottom:6px}
-.check::before{content:"✔ ";color:var(--green);font-weight:700}
-
-.sim{
-  background:linear-gradient(180deg,#ecfeff,#f0f9ff);
-  border-radius:22px;
-  padding:28px;
-  margin-top:30px;
+.card {
+    background: var(--bg-soft);
+    border-radius: 28px;
+    padding: 44px;
+    margin-bottom: 45px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
 }
 
-.sim input{
-  width:100%;
-  padding:14px;
-  border-radius:14px;
-  border:1px solid #dbeafe;
-  margin-bottom:12px;
+.illustration {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-.sim button{
-  background:linear-gradient(45deg,var(--blue),var(--purple));
-  color:#fff;
-  border:none;
-  padding:14px 26px;
-  border-radius:16px;
-  font-weight:800;
-  cursor:pointer;
+.marketing p {
+    font-size: 1.25rem;
+    color: var(--text-dim);
+    margin-bottom: 16px;
 }
 
-.result{
-  margin-top:14px;
-  padding:14px;
-  background:#fff;
-  border-radius:14px;
-  color:var(--blue);
+.bullets {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
 }
 
-.price{
-  text-align:center;
-  font-size:2.4rem;
-  font-weight:800;
-  color:var(--purple);
-  margin:40px 0 20px;
+.bullets li {
+    margin-bottom: 12px;
 }
 
-.cta{
-  display:block;
-  text-align:center;
-  background:linear-gradient(45deg,var(--pink),var(--purple));
-  color:#fff;
-  padding:22px;
-  font-size:1.6rem;
-  border-radius:24px;
-  text-decoration:none;
-  font-weight:800;
-  box-shadow:0 20px 40px rgba(139,92,246,.35);
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 24px;
+    margin-top: 30px;
 }
 
-.contacts{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-  margin-top:25px;
+.session {
+    border-radius: 20px;
+    padding: 26px;
+    background: linear-gradient(180deg, #f9fafb, #eef2ff);
 }
 
-.contact{
-  text-align:center;
-  padding:16px;
-  border-radius:18px;
-  font-weight:600;
-  text-decoration:none;
-  border:2px solid #bfdbfe;
-  color:var(--blue);
+.session h3 {
+    margin-top: 0;
+    color: var(--purple);
 }
 
-footer{
-  text-align:center;
-  color:var(--muted);
-  font-size:.9rem;
-  padding:40px 0;
+.check {
+    display: block;
+    color: var(--text-dim);
+    margin-bottom: 6px;
 }
 
-svg{max-width:100%;height:auto}
+.check::before {
+    content: "✔ ";
+    color: var(--green);
+    font-weight: bold;
+}
+
+.simulator {
+    background: linear-gradient(180deg, #ecfeff, #f0f9ff);
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 30px;
+}
+
+.simulator input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #dbeafe;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.simulator button {
+    background: linear-gradient(45deg, var(--blue), var(--purple));
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 15px;
+    padding: 14px;
+    background: white;
+    border-radius: 12px;
+    color: var(--blue);
+    min-height: 40px;
+}
+
+.price {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--purple);
+    margin: 40px 0 20px;
+}
+
+.cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(45deg, var(--pink), var(--purple));
+    color: white;
+    padding: 22px;
+    font-size: 1.6rem;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 20px 40px rgba(139,92,246,0.35);
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact {
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--blue);
+    border: 2px solid #bfdbfe;
+}
+
+footer {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    padding: 40px 0;
+}
 
 @media(max-width:600px){
-  h1{font-size:2.5rem}
-  .contacts{grid-template-columns:1fr}
+    h1{font-size:2.5rem}
+    .contacts{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
 <header>
-  <div class="badge">מחזור חדש נפתח בקרוב</div>
-  <h1>קורס AI למתחילים</h1>
-  <div class="subtitle">כניסה פשוטה, צבעונית ומעשית לעולם הבינה המלאכותית</div>
-  <div class="teacher">👩‍🏫 בהנחיית תמר שורק | 💻 מתקיים בזום</div>
+    <div class="badge">מחזור חדש נפתח בקרוב</div>
+    <h1>קורס AI למתחילים</h1>
+    <div class="subtitle">הכניסה הידידותית והמעשית לעולם הבינה המלאכותית</div>
+    <div class="teacher">
+        👩‍🏫 בהנחיית תמר שורק &nbsp;|&nbsp; 💻 מתקיים בזום
+    </div>
 </header>
 
-<!-- HERO -->
-<div class="card flex">
-  <div class="text-block">
+<div class="card marketing">
+    <div class="illustration">✨🤖</div>
     <p>
-      הבינה המלאכותית כבר כאן – והקורס הזה מאפשר גם לכם להשתמש בה
-      בצורה פשוטה, נעימה וללא ידע מוקדם.
+        הבינה המלאכותית משנה את העולם – והקורס הזה מאפשר גם לכם להיות חלק מהמהפכה.
     </p>
     <p>
-      לומדים צעד־אחר־צעד, מתנסים בזמן אמת,
-      ויוצאים עם כלים שתוכלו להשתמש בהם מיד.
+        בלי ידע מוקדם, בלי מושגים מסובכים ובלי טכנולוגיה מלחיצה.
+        נלמד בצורה ברורה, רגועה ומעשית איך להשתמש ב-AI ביומיום.
     </p>
-  </div>
-
-  <!-- SVG HERO -->
-  <svg viewBox="0 0 300 240" aria-hidden="true">
-    <defs>
-      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#3b82f6"/>
-        <stop offset="100%" stop-color="#8b5cf6"/>
-      </linearGradient>
-    </defs>
-    <rect x="20" y="20" rx="24" ry="24" width="260" height="200" fill="url(#g1)" opacity=".15"/>
-    <circle cx="120" cy="110" r="38" fill="#ec4899"/>
-    <rect x="165" y="70" width="70" height="80" rx="12" fill="#3b82f6"/>
-    <line x1="165" y1="90" x2="235" y2="90" stroke="#fff" stroke-width="4"/>
-    <line x1="165" y1="110" x2="235" y2="110" stroke="#fff" stroke-width="4"/>
-    <line x1="165" y1="130" x2="215" y2="130" stroke="#fff" stroke-width="4"/>
-  </svg>
 </div>
 
-<!-- BULLETS -->
 <div class="card">
-  <ul class="bullets">
-    <li>🌍 הבינה המלאכותית משנה את העולם – וזה הזמן להצטרף</li>
-    <li>🎓 קורס מעשי ונגיש במיוחד למתחילים</li>
-    <li>🚫 אין צורך בידע טכני מוקדם</li>
-    <li>⚡ חיסכון בזמן, יצירת תוכן וחשיבה חכמה</li>
-    <li>💻 שלושה מפגשי זום מהבית</li>
-    <li>🗣️ לומדים איך “לדבר” עם AI ולקבל תוצאות</li>
-  </ul>
-
-  <div class="sim">
-    <h3>רוצים לראות כמה זה פשוט?</h3>
-    <input id="simInput" placeholder="למשל: הודעה למנהל, ברכה, מייל">
-    <button onclick="simulateAI()">שפר עם AI</button>
-    <div id="simResult" class="result">כאן תופיע התוצאה</div>
-  </div>
-</div>
-
-<!-- SYLLABUS -->
-<div class="card">
-  <h2 style="text-align:center">מה נלמד בקורס?</h2>
-  <div class="grid">
-    <div class="session">
-      <h3>מפגש 1 – להכיר את המוח החדש</h3>
-      <span class="check">מה זה ChatGPT ובינה מלאכותית</span>
-      <span class="check">פתיחת חשבון והתמצאות</span>
-      <span class="check">הפרומפט הראשון – איך לבקש נכון</span>
-    </div>
-    <div class="session">
-      <h3>מפגש 2 – העוזר האישי שלכם</h3>
-      <span class="check">כתיבת מיילים, ברכות ופוסטים</span>
-      <span class="check">סיכום מאמרים ותכנון טיולים</span>
-      <span class="check">תיקון שגיאות ושיפור ניסוחים</span>
-    </div>
-    <div class="session">
-      <h3>מפגש 3 – יצירתיות ללא גבולות</h3>
-      <span class="check">יצירת תמונות מטקסט</span>
-      <span class="check">כלים נוספים מומלצים</span>
-      <span class="check">סיכום וטיפים להמשך</span>
-    </div>
-  </div>
-</div>
-
-<!-- WHAT YOU GET -->
-<div class="card flex reverse">
-  <div class="text-block">
-    <p>בסיום הקורס תוכלו:</p>
     <ul class="bullets">
-      <li>📝 ליצור טקסטים, ברכות, שירים ודברי תורה</li>
-      <li>🎨 לייצר תמונות מרשימות</li>
-      <li>📊 לארגן משימות, לתמצת מידע ולהכין מצגות</li>
-      <li>💡 לעבוד עם AI בביטחון ובעצמאות</li>
+        <li>🌍 הבינה המלאכותית כבר כאן – וזה הזמן להצטרף</li>
+        <li>🎓 קורס מעשי ונגיש במיוחד למתחילים</li>
+        <li>🚫 אין צורך בידע טכני מוקדם</li>
+        <li>⚡ חיסכון בזמן, יצירת תוכן וחשיבה חכמה</li>
+        <li>💻 שלושה מפגשי זום מהבית</li>
+        <li>🗣️ לומדים צעד־אחר־צעד איך “לדבר” עם המחשב</li>
     </ul>
-  </div>
 
-  <!-- SVG TOOLS -->
-  <svg viewBox="0 0 260 220" aria-hidden="true">
-    <rect x="20" y="20" width="220" height="180" rx="26" fill="#10b981" opacity=".15"/>
-    <rect x="50" y="60" width="160" height="20" rx="10" fill="#3b82f6"/>
-    <rect x="50" y="95" width="120" height="20" rx="10" fill="#8b5cf6"/>
-    <rect x="50" y="130" width="90" height="20" rx="10" fill="#ec4899"/>
-  </svg>
+    <div class="simulator">
+        <h3>רוצים לראות כמה זה פשוט?</h3>
+        <input id="simInput" placeholder="למשל: הודעה למנהל, ברכה, מייל">
+        <button onclick="simulateAI()">שפר עם AI</button>
+        <div id="simResult" class="result">כאן תופיע התוצאה</div>
+    </div>
 </div>
 
-<!-- AUDIENCE -->
 <div class="card">
-  <h2 style="text-align:center">למי הקורס מתאים?</h2>
-  <ul class="bullets">
-    <li>לצעירים ולמבוגרים</li>
-    <li>למי שלא התנסה עדיין בבינה מלאכותית</li>
-    <li>למי שניסה ורוצה להכיר כלים חדשים</li>
-    <li>עצמאיים, שכירים, סטודנטים ואנשי חינוך</li>
-  </ul>
-  <p style="text-align:center;font-weight:700">
-    רמת ידע נדרשת: יכולת לגלוש באינטרנט
-  </p>
+    <h2 style="text-align:center;">מה נלמד בקורס?</h2>
+
+    <div class="grid">
+        <div class="session">
+            <h3>מפגש 1 – להכיר את המוח החדש</h3>
+            <span class="check">מה זה ChatGPT ובינה מלאכותית</span>
+            <span class="check">פתיחת חשבון והיכרות עם הממשק</span>
+            <span class="check">הפרומפט הראשון – איך לבקש נכון</span>
+        </div>
+
+        <div class="session">
+            <h3>מפגש 2 – העוזר האישי שלכם</h3>
+            <span class="check">כתיבת מיילים, ברכות ופוסטים</span>
+            <span class="check">סיכום מאמרים ותכנון טיולים</span>
+            <span class="check">תיקון שגיאות ושיפור ניסוחים</span>
+        </div>
+
+        <div class="session">
+            <h3>מפגש 3 – יצירתיות ללא גבולות</h3>
+            <span class="check">יצירת תמונות מטקסט</span>
+            <span class="check">כלים נוספים מומלצים</span>
+            <span class="check">סיכום וטיפים להמשך</span>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2 style="text-align:center;">עם מה תצאו מהקורס?</h2>
+    <ul class="bullets">
+        <li>📝 יצירת טקסטים, ברכות, שירים ודברי תורה</li>
+        <li>🎨 יצירת תמונות מרהיבות</li>
+        <li>📊 ארגון משימות, תמצות מידע והכנת מצגות</li>
+        <li>💡 ביטחון ועצמאות בעבודה עם AI</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2 style="text-align:center;">למי הקורס מתאים?</h2>
+    <ul class="bullets">
+        <li>לצעירים ולמבוגרים</li>
+        <li>למי שלא התנסה עדיין בבינה מלאכותית</li>
+        <li>למי שניסה ורוצה להכיר כלים חדשים</li>
+        <li>עצמאיים, שכירים, סטודנטים ואנשי חינוך</li>
+    </ul>
+    <p style="text-align:center;font-weight:600;">
+        רמת ידע נדרשת: יכולת לגלוש באינטרנט
+    </p>
 </div>
 
 <div class="price">כל הקורס ב־135 ₪ בלבד</div>
 
 <a class="cta" href="https://forms.gle/yMC5KyPKRSpSUSwS7" target="_blank">
-  שריינו מקום עכשיו
+    שריינו מקום עכשיו
 </a>
 
 <div class="contacts">
-  <a class="contact" href="https://wa.me/972545640993">וואטסאפ: 054-5640993</a>
-  <a class="contact" href="mailto:tamsoreq993@gmail.com">tamsoreq993@gmail.com</a>
+    <a class="contact" href="https://wa.me/972545640993">וואטסאפ: 054-5640993</a>
+    <a class="contact" href="mailto:tamsoreq993@gmail.com">tamsoreq993@gmail.com</a>
 </div>
 
 <footer>
-  © 2025 קורס בינה מלאכותית | תמר שורק
+    © 2025 קורס בינה מלאכותית | תמר שורק
 </footer>
 
 </div>
 
 <script>
 function simulateAI(){
-  const i=document.getElementById("simInput").value;
-  const r=document.getElementById("simResult");
-  if(!i){r.innerText="כתבו משהו כדי לראות קסם";return;}
-  r.innerText="ה-AI חושב...";
-  setTimeout(()=>{
-    r.innerText="נוסח משופר, ברור ומקצועי – כך זה עובד בקורס 🙂";
-  },1000);
+    const i=document.getElementById("simInput").value;
+    const r=document.getElementById("simResult");
+    if(!i){r.innerText="כתבו משהו כדי לראות קסם";return;}
+    r.innerText="ה-AI משפר את הטקסט...";
+    setTimeout(()=>{
+        r.innerText="נוסח ברור, מקצועי ומשכנע – כך זה עובד בקורס 🙂";
+    },1000);
 }
 </script>
 
 </body>
 </html>
-
-
